@@ -34,9 +34,11 @@ export default {
     <div id="nav-shop">
         <nav>
             <ul>
-                <li v-for="linkShop in linksShop">
-                    <img :src="linkShop.image" alt="">
-                    {{ linkShop.text }}
+                <li>
+                    <a href="" v-for="linkShop in linksShop">
+                        <img :src="linkShop.image" alt="">
+                        {{ linkShop.text }}
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -68,9 +70,17 @@ export default {
         li {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 5em;
             text-transform: uppercase;
             font-size: .8em;
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                text-decoration: none;
+                color: white;
+            }
 
             img {
                 width: 30px;

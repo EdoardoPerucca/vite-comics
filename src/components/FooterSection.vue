@@ -21,12 +21,11 @@ export default {
                     <h3>follow us</h3>
 
                     <div id="footer-right-icon">
-                        <i class="fa-brands fa-facebook-f icon"></i>
-                        <i class="fa-brands fa-twitter icon"></i>
-                        <i class="fa-brands fa-youtube icon"></i>
-                        <i class="fa-brands fa-pinterest-p icon"></i>
-                        <i class="fa-solid fa-location-dot icon"></i>
-
+                        <img src="img/footer-facebook.png" alt="">
+                        <img src="img/footer-twitter.png" alt="">
+                        <img src="img/footer-youtube.png" alt="">
+                        <img src="img/footer-pinterest.png" alt="">
+                        <img src="img/footer-periscope.png" alt="">
                     </div>
 
                 </div>
@@ -73,12 +72,6 @@ export default {
                 gap: 1em;
 
 
-                .icon {
-                    background-color: #797979;
-                    color: #303030;
-                    padding: .5em;
-                    border-radius: 50%;
-                }
             }
         }
     }

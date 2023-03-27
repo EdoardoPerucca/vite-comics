@@ -17,6 +17,7 @@ export default {
             ],
 
         }
+
     }
 }
 </script>
@@ -30,7 +31,7 @@ export default {
 
             <nav>
                 <ul>
-                    <li v-for="link in links"> {{ link }}</li>
+                    <li v-for="link in links"> {{ link }} </li>
                 </ul>
             </nav>
 
@@ -69,6 +70,7 @@ export default {
                 gap: 15px;
                 color: #615856;
                 border-bottom: 4px solid #0282f9;
+
 
                 li {
                     display: flex;

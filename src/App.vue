@@ -44,7 +44,6 @@ export default {
 #vue-container {
   width: 100vw;
   height: 100vh;
-  background-image: url('/img/footer-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 

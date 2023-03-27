@@ -17,6 +17,13 @@ export default {
                     ]
                 },
                 {
+                    title: 'shop',
+                    links: [
+                        'shop DC',
+                        'shop DC collectibles'
+                    ]
+                },
+                {
                     title: 'dc',
                     links: [
                         'terms of use',
@@ -42,13 +49,7 @@ export default {
                         'DC power visa'
                     ]
                 },
-                {
-                    title: 'shop',
-                    links: [
-                        'shop DC',
-                        'shop DC collectibles'
-                    ]
-                },
+
             ]
         }
     }
@@ -57,18 +58,20 @@ export default {
 
 <template>
     <div id="main">
+        <div id="main-inner">
 
-        <nav>
-            <div id="main-column" v-for="mainColumn in mainColumns">
-                <strong> {{ mainColumn.title }} </strong>
-                <ul>
-                    <li v-for="link in mainColumn.links"> {{ link }}</li>
-                </ul>
+            <nav>
+                <div id="main-column" v-for="mainColumn in mainColumns">
+                    <strong> {{ mainColumn.title }} </strong>
+                    <ul>
+                        <li v-for="link in mainColumn.links"> {{ link }}</li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div>
+                <img id="img-logo" src="/img/dc-logo-bg.png" alt="">
             </div>
-        </nav>
-
-        <div>
-            <img id="img-logo" src="/img/dc-logo-bg.png" alt="">
         </div>
 
     </div>
@@ -76,45 +79,50 @@ export default {
 
 <style scoped lang="scss">
 #main {
-    height: calc(100% - 360px);
     color: white;
     position: relative;
     overflow-y: hidden;
-    max-width: 1000px;
     width: 100%;
     margin: auto;
     padding-top: 20px;
+    background-image: url('/img/footer-bg.jpg');
 
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        width: calc(100% / 3);
-        width: 300px;
-        gap: 20px;
-        font-size: .7em;
+    #main-inner {
+        max-width: 1000px;
+        margin: auto;
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 250px;
+            width: 300px;
+            gap: 20px;
+            font-size: .7em;
 
 
-        #main-column {
+            #main-column {
 
-            strong {
-                text-transform: uppercase;
-                font-size: .9em;
-            }
+                strong {
+                    text-transform: uppercase;
+                    font-size: .9em;
+                }
 
-            li {
-                color: #616a67;
+                li {
+                    color: #616a67;
+                }
+
             }
 
         }
 
-    }
 
-
-    #img-logo {
-        width: 400px;
-        position: absolute;
-        top: -70px;
-        right: 0px;
+        #img-logo {
+            width: 400px;
+            position: absolute;
+            top: -20%;
+            right: 10%;
+        }
     }
 
 }
