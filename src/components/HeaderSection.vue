@@ -13,11 +13,18 @@ export default {
                 'videos',
                 'fans',
                 'news',
-                'shop',
+                'shop'
             ],
 
+            activeIndex: [],
         }
 
+    },
+
+    methods: {
+        newActiveIndex(newIndex) {
+            this.activeIndex = newIndex
+        }
     }
 }
 </script>
@@ -31,7 +38,12 @@ export default {
 
             <nav>
                 <ul>
-                    <li v-for="link in links"> {{ link }} </li>
+                    <li>
+                        <a href="#" v-for="(link, index) in links" :class="index == activeIndex ? 'active' : ''"
+                            @click="newActiveIndex(index)">
+                            {{ link }}
+                        </a>
+                    </li>
                 </ul>
             </nav>
 
@@ -67,9 +79,6 @@ export default {
                 display: flex;
                 flex-flow: row nowrap;
                 height: 100%;
-                gap: 15px;
-                color: #615856;
-                border-bottom: 4px solid #0282f9;
 
 
                 li {
@@ -77,6 +86,25 @@ export default {
                     align-items: center;
                     text-transform: uppercase;
                     font-size: .8em;
+                    gap: 15px;
+
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        text-decoration: none;
+                        color: #615856;
+                        height: 100%;
+
+                        &.active {
+                            color: #0282f9;
+                            border-bottom: 3px solid #0282f9;
+
+
+                        }
+
+                    }
+
                 }
 
             }
